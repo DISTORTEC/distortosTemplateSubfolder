@@ -53,3 +53,17 @@ the default value;
 `./${DISTORTOS_PATH}/configure.sh <path-to-distortosConfiguration.mk>` to select the configuration you
 created/chose above;
 6. Execute `make` (if you use *GNU Make*) or `tup` (if you use *tup*);
+
+#### Quick example
+
+Following commands may be executed in POSIX-compatible shell (e.g. *Bash*) to build latest project template with latest
+*distortos*, using one of existing configurations.
+
+    $ wget https://github.com/DISTORTEC/distortosTemplateSubfolder/archive/master.zip -O distortosTemplateSubfolder-master.zip
+    $ unzip -q distortosTemplateSubfolder-master.zip
+    $ wget https://github.com/DISTORTEC/distortos/archive/master.zip -O distortos-master.zip
+    $ unzip -q distortos-master.zip -d distortosTemplateSubfolder-master
+    $ cd distortosTemplateSubfolder-master
+    $ mv distortos-master/ distortos/
+    $ make configure CONFIG_PATH=distortos/configurations/STM32F4DISCOVERY/test
+    $ make
