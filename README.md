@@ -1,4 +1,4 @@
-distortosTemplateSubfolder
+distortosTemplateSubfolder [![Build Status](https://travis-ci.org/DISTORTEC/distortosTemplateSubfolder.svg?branch=master)](https://travis-ci.org/DISTORTEC/distortosTemplateSubfolder)
 ==========================
 
 Project template for [distortos](http://distortos.org/) - an advanced real-time operating system for deeply embedded
