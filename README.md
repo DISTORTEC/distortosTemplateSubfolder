@@ -54,8 +54,11 @@ created/chose above;
 
 #### Quick example
 
-Following commands may be executed in POSIX-compatible shell (e.g. *Bash*) to build latest project template with latest
-*distortos*, using one of existing configurations.
+Following commands may be executed in POSIX-compatible shell (e.g. *Bash*).
+
+##### 1. Download
+
+Download and extract latest project template with latest *distortos*:
 
     $ wget https://github.com/DISTORTEC/distortosTemplateSubfolder/archive/master.zip -O distortosTemplateSubfolder-master.zip
     $ unzip -q distortosTemplateSubfolder-master.zip
@@ -63,5 +66,40 @@ Following commands may be executed in POSIX-compatible shell (e.g. *Bash*) to bu
     $ unzip -q distortos-master.zip -d distortosTemplateSubfolder-master
     $ cd distortosTemplateSubfolder-master
     $ mv distortos-master/ distortos/
+
+##### 2. Configure
+
+Either use one of existing configurations:
+
     $ make configure CONFIG_PATH=distortos/configurations/STM32F4DISCOVERY/test
+
+or create a new one from scratch:
+
+    $ make menuconfig
+    ... edit some options, save the configuration as distortosConfiguration.mk ...
+    $ make configure
+
+##### 3. Build
+
+Build the project with *make*:
+
     $ make
+
+or do the same with *tup*:
+
+    $ tup
+
+##### 4. Edit configuration & rebuild
+
+To edit any option in the selected configuration just run *kconfig* tool again:
+
+    $ make menuconfig
+    ... edit some options, overwrite configuration file ...
+
+You can rebuild the project immediatelly by running *make*:
+
+    $ make
+
+or *tup*:
+
+    $ tup
