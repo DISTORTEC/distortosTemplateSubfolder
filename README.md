@@ -47,8 +47,7 @@ repository or configure it as a git submodule;
 3. Configure path to sources of *distortos* in `DISTORTOS_PATH` variable in top-level `Makefile` (if you use
 *GNU Make*) or `Tuprules.lua` (if you use *tup*); You can skip this step if this path is `distortos/`, as this is
 the default value;
-4. Configure distortos - you can either create new configuration (with `make menuconfig` or
-`cd ${DISTORTOS_PATH} && kconfig-mconf Kconfig`) or use and existing one;
+4. Configure distortos - you can either create new configuration (with `make menuconfig`) or use and existing one;
 5. Execute `make configure CONFIG_PATH=<path-to-distortosConfiguration.mk>` or
 `./${DISTORTOS_PATH}/configure.sh <path-to-distortosConfiguration.mk>` to select the configuration you
 created/chose above;
