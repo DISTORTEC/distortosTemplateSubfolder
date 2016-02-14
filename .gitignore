@@ -7,6 +7,9 @@ selectedConfiguration.mk
 # build output
 output/
 
+# doxygen documentation output
+documentation/html/
+
 # Eclipse project files
 .cproject
 .project
