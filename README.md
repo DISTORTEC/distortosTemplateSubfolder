@@ -4,8 +4,8 @@ distortosTemplateSubfolder [![Build Status](https://travis-ci.org/DISTORTEC/dist
 Project template for [distortos](http://distortos.org/) - an advanced real-time operating system for deeply embedded
 targets.
 
-In this template *distortos* is located in a subfolder of the project. This subfolder can be a git submodule or an
-extracted source package. Such structure may look like this:
+In this template *distortos* is located in a subfolder of the project. This subfolder can be a git submodule (as in this
+repository) or an extracted source package. Such structure may look like this:
 
     .
     ├── applicationFolder1/
@@ -35,15 +35,17 @@ extracted source package. Such structure may look like this:
     ├── Tuprules.lua
     └── ...
 
-Subfolder with distortos can have any name and can be located anywhere in your project - this can be configured in
+Subfolder with *distortos* can have any name and can be located anywhere in your project - this can be configured in
 top-level `Makefile` or `Tuprules.lua` of this template with `DISTORTOS_PATH` variable.
 
 Configuration & building
 ------------------------
 
-1. Download this template - either download and extract it from source package or clone its repository;
-2. Add sources of *distortos* somewhere in the template - either download and extract it from source package, clone its
-repository or configure it as a git submodule;
+1. Download
+[source package of this template](https://github.com/DISTORTEC/distortosTemplateSubfolder/archive/master.zip) and
+extract it; 
+2. Download [source package of distortos](https://github.com/DISTORTEC/distortos/archive/master.zip) and extract it
+somewhere inside the template;
 3. Configure path to sources of *distortos* in `DISTORTOS_PATH` variable in top-level `Makefile` (if you use
 *GNU Make*) or `Tuprules.lua` (if you use *tup*); You can skip this step if this path is `distortos/`, as this is
 the default value;
@@ -51,6 +53,10 @@ the default value;
 5. Execute `make configure CONFIG_PATH=<path-to-distortosConfiguration.mk>` to select the configuration you
 created/chose above;
 6. Execute `make` (if you use *GNU Make*) or `tup` (if you use *tup*);
+
+Alternatively you can replace steps 1 and 2 with just
+`git clone --recursive https://github.com/DISTORTEC/distortosTemplateSubfolder`. In such scenario you can also
+skip step 3. To update *distortos* submodule to latest version use `git submodule update --remote` command.
 
 #### Quick example
 
@@ -65,7 +71,7 @@ Download and extract latest project template with latest *distortos*:
     $ wget https://github.com/DISTORTEC/distortos/archive/master.zip -O distortos-master.zip
     $ unzip -q distortos-master.zip -d distortosTemplateSubfolder-master
     $ cd distortosTemplateSubfolder-master
-    $ mv distortos-master/ distortos/
+    $ mv -T distortos-master/ distortos/
 
 ##### 2. Configure
 
