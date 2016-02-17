@@ -13,15 +13,14 @@ sudo: false
 # use minimal environment
 language: generic
 
-# bleeding-edge-toolchain
+# submodule and bleeding-edge-toolchain
 install:
+    - git submodule init
+    - git submodule update
     - wget http://www.freddiechopin.info/en/download/category/11-bleeding-edge-toolchain?download=139%3Ableeding-edge-toolchain-151225-64-bit-linux -O /tmp/gcc-arm-none-eabi-5_3-151225-linux-x64.tar.xz
     - tar -xf /tmp/gcc-arm-none-eabi-5_3-151225-linux-x64.tar.xz -C /tmp/
     - wget http://www.freddiechopin.info/en/download/category/11-bleeding-edge-toolchain?download=122%3Ableeding-edge-toolchain-150928-64-bit-linux -O /tmp/gcc-arm-none-eabi-4_9-150928-linux-x64.tar.xz
     - tar -xf /tmp/gcc-arm-none-eabi-4_9-150928-linux-x64.tar.xz -C /tmp/
-    - wget https://github.com/DISTORTEC/distortos/archive/master.zip -O /tmp/master.zip
-    - unzip -q /tmp/master.zip -d /tmp
-    - ln -s /tmp/distortos-master $PWD/distortos
     - export SAVED_PATH=$PATH
 
 # configure and build selected configurations
