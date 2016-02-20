@@ -15,8 +15,6 @@ language: generic
 
 # submodule and bleeding-edge-toolchain
 install:
-    - git submodule init
-    - git submodule update
     - wget http://www.freddiechopin.info/en/download/category/11-bleeding-edge-toolchain?download=139%3Ableeding-edge-toolchain-151225-64-bit-linux -O /tmp/gcc-arm-none-eabi-5_3-151225-linux-x64.tar.xz
     - tar -xf /tmp/gcc-arm-none-eabi-5_3-151225-linux-x64.tar.xz -C /tmp/
     - wget http://www.freddiechopin.info/en/download/category/11-bleeding-edge-toolchain?download=122%3Ableeding-edge-toolchain-150928-64-bit-linux -O /tmp/gcc-arm-none-eabi-4_9-150928-linux-x64.tar.xz
