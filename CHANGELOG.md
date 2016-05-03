@@ -3,6 +3,11 @@ Change Log
 
 All notable changes to this project will be documented in this file.
 
+[20160503](https://github.com/DISTORTEC/distortosTemplateSubfolder/compare/v20160226...v20160503) - 2016-05-03
+--------------------------------------------------------------------------------------------------------------
+
+This is just a snapshot with version *0.2.0* of *distortos*.
+
 20160226 - 2016-02-26
 ---------------------
 
