@@ -52,7 +52,7 @@ $(ELF_$(d)): $(OUTPUT)libdistortos.a $(OBJECTS_$(d)) $(LDSCRIPT) $(d)Rules.mk
 $(ELF_$(d)): $(filter-out $(SUBDIRECTORIES_OBJECTS_$(DISTORTOS_PATH)),$(SUBDIRECTORIES_OBJECTS_$(d)))
 
 #-----------------------------------------------------------------------------------------------------------------------
-# .hex, .bin, .dmp and .lss files depends on .elf file and this Rules.mk
+# .hex, .bin, .dmp and .lss files depend on .elf file and this Rules.mk
 #-----------------------------------------------------------------------------------------------------------------------
 
 $(HEX_$(d)): $(ELF_$(d)) $(d)Rules.mk
