@@ -1,8 +1,7 @@
 distortosTemplateSubfolder [![Build Status](https://travis-ci.org/DISTORTEC/distortosTemplateSubfolder.svg?branch=master)](https://travis-ci.org/DISTORTEC/distortosTemplateSubfolder)
 ==========================
 
-Project template for [distortos](http://distortos.org/) - an advanced real-time operating system for deeply embedded
-targets.
+Project template for [distortos](http://distortos.org/) - object-oriented C++ RTOS for microcontrollers
 
 In this template *distortos* is located in a subfolder of the project. This subfolder can be a git submodule (as in this
 repository) or an extracted source package. Such structure may look like this:
