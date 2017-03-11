@@ -82,9 +82,9 @@ or clone the repository:
 
 or download and extract latest released project template:
 
-    $ wget http://distortos.org/files/distortosTemplateSubfolder-20161124.tar.xz
-    $ tar -xf distortosTemplateSubfolder-20161124.tar.xz
-    $ cd distortosTemplateSubfolder-20161124
+    $ wget http://distortos.org/files/distortosTemplateSubfolder-20170311.tar.xz
+    $ tar -xf distortosTemplateSubfolder-20170311.tar.xz
+    $ cd distortosTemplateSubfolder-20170311
 
 #### 2. Configure
 
