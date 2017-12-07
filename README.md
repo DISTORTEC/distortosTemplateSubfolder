@@ -90,7 +90,7 @@ or download and extract latest released project template:
 
 Either use one of existing configurations:
 
-    $ make configure CONFIG_PATH=distortos/configurations/STM32F4DISCOVERY/test
+    $ make configure CONFIG_PATH=distortos/configurations/ST_STM32F4DISCOVERY/test
 
 or create a new one from scratch:
 
