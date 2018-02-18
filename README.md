@@ -29,13 +29,10 @@ repository) or an extracted source package. Such structure may look like this:
     ├── Rules.mk
     ├── topFile1.cpp
     ├── topFile2.cpp
-    ├── ...
-    ├── Tupfile.lua
-    ├── Tuprules.lua
     └── ...
 
 Subfolder with *distortos* can have any name and can be located anywhere in your project - this can be configured in
-top-level `Makefile` or `Tuprules.lua` of this template with `DISTORTOS_PATH` variable.
+top-level `Makefile` of this template with `DISTORTOS_PATH` variable.
 
 Configuration & building
 ------------------------
@@ -45,13 +42,12 @@ Configuration & building
 extract it;
 2. Download [source package of distortos](https://github.com/DISTORTEC/distortos/archive/master.zip) and extract it
 somewhere inside the template;
-3. Configure path to sources of *distortos* in `DISTORTOS_PATH` variable in top-level `Makefile` (if you use
-*GNU Make*) or `Tuprules.lua` (if you use *tup*); You can skip this step if this path is `distortos/`, as this is
-the default value;
+3. Configure path to sources of *distortos* in `DISTORTOS_PATH` variable in top-level `Makefile`; You can skip this step
+if this path is `distortos/`, as this is the default value;
 4. Configure distortos - you can either create new configuration (with `make menuconfig`) or use an existing one;
 5. Execute `make configure CONFIG_PATH=<path-to-distortosConfiguration.mk>` to select the configuration you
 created/chose above;
-6. Execute `make` (if you use *GNU Make*) or `tup` (if you use *tup*);
+6. Execute `make`;
 
 Alternatively you can replace steps 1 and 2 with just
 `git clone --recursive https://github.com/DISTORTEC/distortosTemplateSubfolder`. In such scenario you can also
@@ -104,10 +100,6 @@ Build the project with *make*:
 
     $ make
 
-or do the same with *tup*:
-
-    $ tup
-
 #### 4. Edit configuration & rebuild
 
 To edit any option in the selected configuration just run *kconfig* tool again:
@@ -118,7 +110,3 @@ To edit any option in the selected configuration just run *kconfig* tool again:
 You can rebuild the project immediatelly by running *make*:
 
     $ make
-
-or *tup*:
-
-    $ tup
