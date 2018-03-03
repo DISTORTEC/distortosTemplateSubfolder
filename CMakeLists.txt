@@ -30,7 +30,7 @@ set_target_properties(distortosTemplateSubfolder.elf PROPERTIES
 		CXX_STANDARD_REQUIRED ON)
 target_link_libraries(distortosTemplateSubfolder.elf
 		distortos::distortos
-		-Wl,-Map=${CMAKE_CURRENT_BINARY_DIR}/distortosTemplateSubfolder.map)
+		-Xlinker -Map="${CMAKE_CURRENT_BINARY_DIR}/distortosTemplateSubfolder.map")
 
 include(${CMAKE_CURRENT_LIST_DIR}/folderWithFunctions/distortosTemplateSubfolder.elf-sources.cmake)
 
