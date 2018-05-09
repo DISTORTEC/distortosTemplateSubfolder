@@ -10,7 +10,6 @@
 cmake_minimum_required(VERSION 3.1)
 project(distortosTemplateSubfolder)
 
-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/distortos/cmake)
 include(distortos-utilities)
 
 #-----------------------------------------------------------------------------------------------------------------------
@@ -23,20 +22,20 @@ add_subdirectory(distortos)
 # distortosTemplateSubfolder application
 #-----------------------------------------------------------------------------------------------------------------------
 
-add_executable(distortosTemplateSubfolder.elf
+add_executable(distortosTemplateSubfolder
 		main.cpp)
-set_target_properties(distortosTemplateSubfolder.elf PROPERTIES
+set_target_properties(distortosTemplateSubfolder PROPERTIES
 		CXX_STANDARD 11
 		CXX_STANDARD_REQUIRED ON)
-target_link_libraries(distortosTemplateSubfolder.elf
+target_link_libraries(distortosTemplateSubfolder
 		distortos::distortos
 		distortos::allCxxFlags
 		-Xlinker -Map="${CMAKE_CURRENT_BINARY_DIR}/distortosTemplateSubfolder.map")
 
-include(${CMAKE_CURRENT_LIST_DIR}/folderWithFunctions/distortosTemplateSubfolder.elf-sources.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/folderWithFunctions/distortosTemplateSubfolder-sources.cmake)
 
-bin(distortosTemplateSubfolder.elf distortosTemplateSubfolder.bin)
-dmp(distortosTemplateSubfolder.elf distortosTemplateSubfolder.dmp)
-hex(distortosTemplateSubfolder.elf distortosTemplateSubfolder.hex)
-lss(distortosTemplateSubfolder.elf distortosTemplateSubfolder.lss)
-size(distortosTemplateSubfolder.elf)
+bin(distortosTemplateSubfolder distortosTemplateSubfolder.bin)
+dmp(distortosTemplateSubfolder distortosTemplateSubfolder.dmp)
+hex(distortosTemplateSubfolder distortosTemplateSubfolder.hex)
+lss(distortosTemplateSubfolder distortosTemplateSubfolder.lss)
+size(distortosTemplateSubfolder)

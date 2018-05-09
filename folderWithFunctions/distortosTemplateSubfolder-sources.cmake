@@ -1,5 +1,5 @@
 #
-# file: distortosTemplateSubfolder.elf-sources.cmake
+# file: distortosTemplateSubfolder-sources.cmake
 #
 # author: Copyright (C) 2018 Kamil Szczygiel http://www.distortec.com http://www.freddiechopin.info
 #
@@ -7,9 +7,9 @@
 # distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #
 
-target_include_directories(distortosTemplateSubfolder.elf PRIVATE
+target_include_directories(distortosTemplateSubfolder PRIVATE
 		${CMAKE_CURRENT_LIST_DIR})
-target_sources(distortosTemplateSubfolder.elf PRIVATE
+target_sources(distortosTemplateSubfolder PRIVATE
 		${CMAKE_CURRENT_LIST_DIR}/functionFromFolder.cpp)
 
-include(${CMAKE_CURRENT_LIST_DIR}/subfolderWithFunctions/distortosTemplateSubfolder.elf-sources.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/subfolderWithFunctions/distortosTemplateSubfolder-sources.cmake)
