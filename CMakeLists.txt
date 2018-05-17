@@ -27,7 +27,7 @@ add_executable(distortosTemplateSubfolder
 set_target_properties(distortosTemplateSubfolder PROPERTIES
 		CXX_STANDARD 11
 		CXX_STANDARD_REQUIRED ON)
-target_link_libraries(distortosTemplateSubfolder
+target_link_libraries(distortosTemplateSubfolder PRIVATE
 		distortos::distortos
 		distortos::allCxxFlags
 		-Xlinker -Map="${CMAKE_CURRENT_BINARY_DIR}/distortosTemplateSubfolder.map")
