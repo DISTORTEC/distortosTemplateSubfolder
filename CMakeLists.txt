@@ -29,8 +29,7 @@ set_target_properties(distortosTemplateSubfolder PROPERTIES
 		CXX_STANDARD_REQUIRED ON)
 target_link_libraries(distortosTemplateSubfolder PRIVATE
 		distortos::distortos
-		distortos::allCxxFlags
-		-Xlinker -Map="${CMAKE_CURRENT_BINARY_DIR}/distortosTemplateSubfolder.map")
+		distortos::allCxxFlags)
 
 include(${CMAKE_CURRENT_LIST_DIR}/folderWithFunctions/distortosTemplateSubfolder-sources.cmake)
 
@@ -38,4 +37,5 @@ distortosBin(distortosTemplateSubfolder distortosTemplateSubfolder.bin)
 distortosDmp(distortosTemplateSubfolder distortosTemplateSubfolder.dmp)
 distortosHex(distortosTemplateSubfolder distortosTemplateSubfolder.hex)
 distortosLss(distortosTemplateSubfolder distortosTemplateSubfolder.lss)
+distortosMap(distortosTemplateSubfolder distortosTemplateSubfolder.map)
 distortosSize(distortosTemplateSubfolder)
