@@ -34,8 +34,8 @@ target_link_libraries(distortosTemplateSubfolder
 
 include(${CMAKE_CURRENT_LIST_DIR}/folderWithFunctions/distortosTemplateSubfolder-sources.cmake)
 
-bin(distortosTemplateSubfolder distortosTemplateSubfolder.bin)
-dmp(distortosTemplateSubfolder distortosTemplateSubfolder.dmp)
-hex(distortosTemplateSubfolder distortosTemplateSubfolder.hex)
-lss(distortosTemplateSubfolder distortosTemplateSubfolder.lss)
-size(distortosTemplateSubfolder)
+distortosBin(distortosTemplateSubfolder distortosTemplateSubfolder.bin)
+distortosDmp(distortosTemplateSubfolder distortosTemplateSubfolder.dmp)
+distortosHex(distortosTemplateSubfolder distortosTemplateSubfolder.hex)
+distortosLss(distortosTemplateSubfolder distortosTemplateSubfolder.lss)
+distortosSize(distortosTemplateSubfolder)
