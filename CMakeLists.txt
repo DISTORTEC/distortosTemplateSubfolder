@@ -30,6 +30,7 @@ set_target_properties(distortosTemplateSubfolder PROPERTIES
 target_link_libraries(distortosTemplateSubfolder PRIVATE
 		distortos::distortos
 		distortos::allCxxFlags)
+distortosTargetLinkerScripts(distortosTemplateSubfolder $ENV{DISTORTOS_LINKER_SCRIPT})
 
 include(${CMAKE_CURRENT_LIST_DIR}/folderWithFunctions/distortosTemplateSubfolder-sources.cmake)
 
