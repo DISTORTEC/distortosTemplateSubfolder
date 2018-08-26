@@ -22,9 +22,6 @@ add_subdirectory(distortos)
 
 add_executable(distortosTemplateSubfolder
 		main.cpp)
-set_target_properties(distortosTemplateSubfolder PROPERTIES
-		CXX_STANDARD 11
-		CXX_STANDARD_REQUIRED ON)
 target_link_libraries(distortosTemplateSubfolder PRIVATE
 		distortos::distortos)
 distortosTargetLinkerScripts(distortosTemplateSubfolder $ENV{DISTORTOS_LINKER_SCRIPT})
