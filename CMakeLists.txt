@@ -7,10 +7,8 @@
 # distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #
 
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.7)
 project(distortosTemplateSubfolder)
-
-include(distortos-utilities)
 
 #-----------------------------------------------------------------------------------------------------------------------
 # distortos library
@@ -24,12 +22,8 @@ add_subdirectory(distortos)
 
 add_executable(distortosTemplateSubfolder
 		main.cpp)
-set_target_properties(distortosTemplateSubfolder PROPERTIES
-		CXX_STANDARD 11
-		CXX_STANDARD_REQUIRED ON)
 target_link_libraries(distortosTemplateSubfolder PRIVATE
-		distortos::distortos
-		distortos::allCxxFlags)
+		distortos::distortos)
 distortosTargetLinkerScripts(distortosTemplateSubfolder $ENV{DISTORTOS_LINKER_SCRIPT})
 
 include(${CMAKE_CURRENT_LIST_DIR}/folderWithFunctions/distortosTemplateSubfolder-sources.cmake)

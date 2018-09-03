@@ -11,6 +11,11 @@
 dist: trusty
 sudo: false
 
+addons:
+    apt:
+        packages:
+            - ninja-build
+
 # use minimal environment
 language: generic
 
@@ -25,4 +30,4 @@ install:
     - "./distortos/scripts/travis-ci.sh install ${SUBSTAGE}"
 
 script:
-    - "./distortos/scripts/travis-ci.sh script ${SUBSTAGE}"
+    - "DISTORTOS_PATH=../distortos ./distortos/scripts/travis-ci.sh script ${SUBSTAGE} ."
